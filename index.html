@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso de Privacidad Integral | ShaMinKet</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --text-muted: #666666;
+            --primary-color: #0F172A;
+            --accent-color: #3B82F6;
+            --border-color: #E2E8F0;
+            --sidebar-bg: #F8FAFC;
+            --highlight: #FEF08A;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #0F172A;
+                --text-color: #E2E8F0;
+                --text-muted: #94A3B8;
+                --primary-color: #F8FAFC;
+                --accent-color: #60A5FA;
+                --border-color: #334155;
+                --sidebar-bg: #1E293B;
+                --highlight: #854D0E;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            gap: 2rem;
+        }
+
+        /* Sidebar / Índice */
+        .sidebar {
+            background-color: var(--sidebar-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            position: sticky;
+            top: 2rem;
+            max-height: calc(100vh - 4rem);
+            overflow-y: auto;
+        }
+
+        .sidebar h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+
+        .sidebar a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Contenido Principal */
+        .content {
+            flex: 1;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            line-height: 1.2;
+        }
+
+        .last-updated {
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        mark {
+            background-color: var(--highlight);
+            color: var(--primary-color);
+            padding: 0 4px;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+
+        .footer-brand {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--border-color);
+            text-align: center;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .footer-brand span {
+            color: var(--accent-color);
+        }
+
+        /* Botón de impresión */
+        .print-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            width: 100%;
+            transition: background-color 0.2s;
+        }
+
+        .print-btn:hover {
+            background-color: #2563EB;
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+            .sidebar {
+                width: 300px;
+                flex-shrink: 0;
+            }
+        }
+
+        @media print {
+            .sidebar, .print-btn {
+                display: none;
+            }
+            .content {
+                max-width: 100%;
+            }
+            body {
+                background-color: white;
+                color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Barra lateral para el Índice -->
+        <aside class="sidebar">
+            <button class="print-btn" onclick="window.print()">🖨️ Imprimir Aviso</button>
+            <h3>Índice de Contenido</h3>
+            <ul id="toc-list">
+                <!-- El JS inyectará los enlaces aquí -->
+            </ul>
+        </aside>
+
+        <!-- Contenido Legal -->
+        <main class="content">
+            <h1>AVISO DE PRIVACIDAD INTEGRAL DE SHAMINKET</h1>
+            <p class="last-updated">Última actualización: 15 de septiembre de 2026</p>
+
+            <p>ShaMinKet, en adelante “ShaMinKet”, “nosotros”, “nuestro” o “la empresa”, es responsable del tratamiento de los datos personales que recabe, obtenga, genere, almacene, utilice o trate con motivo de sus actividades, servicios, plataformas, sitios web, proyectos, comunicaciones y cualquier otra interacción realizada con ShaMinKet.</p>
+            <p>Este Aviso de Privacidad establece las condiciones bajo las cuales ShaMinKet podrá tratar datos personales y tiene como finalidad informar a las personas titulares sobre dicho tratamiento.</p>
+            <p>Al proporcionar datos personales directamente a ShaMinKet, contratar o utilizar sus servicios, comunicarse con ShaMinKet, participar en proyectos o actividades desarrolladas por ShaMinKet, o ingresar y utilizar sitios web cuyo dominio corresponda a shaminket.com o sus subdominios, la persona titular podrá estar sujeta a este Aviso de Privacidad en los términos establecidos por la legislación aplicable.</p>
+
+            <h2 id="seccion-1">1. Responsable del tratamiento</h2>
+            <p>El responsable del tratamiento de los datos personales será:</p>
+            <p><strong>ShaMinKet</strong></p>
+            <p>Domicilio: <mark>[DOMICILIO QUE CORRESPONDA]</mark></p>
+            <p>Correo electrónico de contacto: <mark>[CORREO DE PRIVACIDAD]</mark></p>
+            <p>Sitio web: shaminket.com</p>
+            <p>En caso de que ShaMinKet modifique sus datos de contacto o información de identificación, podrá actualizar este Aviso de Privacidad.</p>
+
+            <h2 id="seccion-2">2. Datos personales que podemos obtener</h2>
+            <p>Dependiendo de la relación que exista con ShaMinKet, podremos obtener diferentes categorías de información. Entre ellas pueden encontrarse:</p>
+            <ul>
+                <li>Nombre y apellidos.</li>
+                <li>Nombre de usuario o identificadores digitales.</li>
+                <li>Información de contacto.</li>
+                <li>Número telefónico.</li>
+                <li>Dirección de correo electrónico.</li>
+                <li>Información proporcionada mediante formularios.</li>
+                <li>Información relacionada con proyectos, servicios o solicitudes.</li>
+                <li>Fotografías, videos, audios y otros archivos proporcionados a ShaMinKet.</li>
+                <li>Información contenida dentro de los archivos que la persona decida proporcionar.</li>
+                <li>Información relacionada con la interacción con nuestros sitios web.</li>
+                <li>Información técnica necesaria para operar nuestros servicios.</li>
+                <li>Preferencias, configuraciones y elecciones realizadas dentro de nuestras plataformas.</li>
+                <li>Información necesaria para prestar, administrar, mejorar o dar seguimiento a los servicios contratados.</li>
+            </ul>
+            <p>Cuando sea necesario para una finalidad específica y permitido por la legislación aplicable, también podrán tratarse otras categorías de datos.</p>
+            <p><strong>Datos personales sensibles</strong><br>
+            ShaMinKet procurará evitar la recopilación innecesaria de datos personales sensibles. Cuando una actividad requiera el tratamiento de datos personales sensibles, ShaMinKet solicitará el consentimiento correspondiente cuando éste sea legalmente necesario y establecerá las medidas aplicables para su protección.</p>
+
+            <h2 id="seccion-3">3. Fuentes de obtención de información</h2>
+            <p>ShaMinKet podrá obtener información:</p>
+            <ol>
+                <li>Directamente de la persona titular.</li>
+                <li>Mediante formularios físicos o digitales.</li>
+                <li>Mediante sitios web, aplicaciones, plataformas o herramientas utilizadas por ShaMinKet.</li>
+                <li>Mediante comunicaciones realizadas por correo electrónico, mensajería, redes sociales u otros medios.</li>
+                <li>Mediante archivos, fotografías, videos, audios o documentos proporcionados voluntariamente.</li>
+                <li>De terceros cuando exista una base jurídica que permita dicha obtención.</li>
+                <li>De fuentes públicamente disponibles, cuando su utilización sea lícita.</li>
+                <li>De proveedores tecnológicos que participen en la operación de los servicios de ShaMinKet.</li>
+                <li>De información generada durante la utilización de nuestros servicios y plataformas.</li>
+            </ol>
+            <p>ShaMinKet no interpretará esta facultad como una autorización para obtener datos de manera ilícita, engañosa o fraudulenta. Cuando los datos personales no hayan sido obtenidos directamente de la persona titular, ShaMinKet podrá adoptar las medidas de información que correspondan conforme a la legislación aplicable.</p>
+
+            <h2 id="seccion-4">4. Finalidades del tratamiento</h2>
+            <p>ShaMinKet podrá tratar los datos personales para las siguientes finalidades:</p>
+            <p><strong>Finalidades principales</strong></p>
+            <ul>
+                <li>Prestar los servicios solicitados.</li>
+                <li>Administrar proyectos.</li>
+                <li>Mantener comunicación con clientes, colaboradores y usuarios.</li>
+                <li>Dar seguimiento a solicitudes.</li>
+                <li>Crear, editar, diseñar, programar o producir materiales.</li>
+                <li>Gestionar cuentas, perfiles y accesos.</li>
+                <li>Personalizar determinados servicios o experiencias.</li>
+                <li>Administrar plataformas digitales.</li>
+                <li>Mantener registros necesarios para la operación de ShaMinKet.</li>
+                <li>Atender solicitudes, preguntas, reclamaciones o incidencias.</li>
+                <li>Cumplir obligaciones legales.</li>
+                <li>Proteger los derechos, bienes, sistemas y servicios de ShaMinKet y de sus usuarios.</li>
+                <li>Detectar, prevenir o investigar usos no autorizados de nuestros sistemas.</li>
+                <li>Mejorar nuestros servicios, procesos, plataformas y herramientas.</li>
+            </ul>
+            <p><strong>Finalidades relacionadas con contenido</strong></p>
+            <p>Cuando una persona proporcione fotografías, videos, audios, documentos, imágenes u otros materiales a ShaMinKet, estos podrán ser tratados para realizar los servicios solicitados. Esto puede incluir:</p>
+            <ul>
+                <li>Edición, diseño, adaptación, corrección, transformación y creación de composiciones.</li>
+                <li>Generación de contenido y creación de variantes visuales.</li>
+                <li>Procesamiento mediante herramientas automatizadas o inteligencia artificial.</li>
+                <li>Producción de materiales para redes sociales, sitios web, publicidad, presentaciones u otros medios.</li>
+            </ul>
+
+            <h2 id="seccion-5">5. Uso de inteligencia artificial</h2>
+            <p>ShaMinKet podrá utilizar herramientas de inteligencia artificial y tecnologías automatizadas para procesar determinados materiales proporcionados por las personas titulares cuando ello sea necesario para prestar un servicio o desarrollar un proyecto.</p>
+            <p>Por ejemplo, una fotografía proporcionada a ShaMinKet podrá utilizarse como referencia o insumo para generar imágenes, editar, crear composiciones, modificar fondos, generar variantes, crear materiales publicitarios, contenido para redes o desarrollar conceptos visuales.</p>
+            <p>El uso de inteligencia artificial no implica necesariamente que el resultado generado sea una reproducción exacta de la persona o del material original. Cuando el uso de un material requiera un consentimiento adicional conforme a la legislación aplicable, ShaMinKet procurará obtenerlo antes de realizar dicha actividad.</p>
+
+            <h2 id="seccion-6">6. Uso y publicación de fotografías y contenido</h2>
+            <p>Cuando una persona proporcione voluntariamente materiales a ShaMinKet para un servicio, podremos utilizarlos dentro del alcance necesario para cumplir con la finalidad informada. Cuando corresponda y exista autorización, ShaMinKet podrá utilizar materiales resultantes de sus proyectos en redes sociales, sitios web, portafolios, presentaciones, material promocional, casos de estudio y publicidad.</p>
+            <p>La publicación de contenido que permita identificar directamente a una persona deberá realizarse de conformidad con los permisos correspondientes. La autorización para tratar datos no es una autorización ilimitada para cualquier publicación.</p>
+
+            <h2 id="seccion-7">7. Transferencia de datos a terceros</h2>
+            <p>ShaMinKet podrá compartir determinados datos personales con terceros cuando sea necesario para cumplir las finalidades descritas, prestar servicios, operar plataformas, cumplir obligaciones legales o proteger derechos. Estos pueden incluir proveedores tecnológicos, de IA, de software, socios comerciales, etc.</p>
+            <p>Entre los colaboradores podrá encontrarse Traby, cuando corresponda a la naturaleza del proyecto. Los terceros deberán utilizarlos únicamente conforme a las finalidades autorizadas. ShaMinKet procurará establecer medidas contractuales para limitar el tratamiento de los datos.</p>
+
+            <h2 id="seccion-8">8. Responsabilidad de terceros</h2>
+            <p>Cuando ShaMinKet utilice proveedores externos, dichas entidades podrán tener sus propias políticas de privacidad. ShaMinKet procurará seleccionar proveedores adecuados; sin embargo, cada proveedor será responsable de las actividades bajo sus propios sistemas.</p>
+
+            <h2 id="seccion-9">9. Contenido generado y derechos de uso</h2>
+            <p>Los materiales creados por ShaMinKet podrán estar sujetos a derechos de autor. Que una persona pueda visualizar un material no significa que tenga autorización para descargarlo, reproducirlo o comercializarlo fuera de la finalidad autorizada. ShaMinKet podrá ejercer acciones legales frente al uso no autorizado.</p>
+
+            <h2 id="seccion-10">10. Seguridad de la información</h2>
+            <p>ShaMinKet implementará medidas administrativas, técnicas y físicas razonables para proteger los datos personales contra accesos no autorizados, pérdida, alteración o destrucción. Ningún sistema es absolutamente seguro. En caso de vulneración grave, ShaMinKet realizará las comunicaciones previstas por la ley.</p>
+
+            <h2 id="seccion-11">11. Confidencialidad</h2>
+            <p>Las personas y terceros que participen en el tratamiento de datos dentro de ShaMinKet deberán mantener la confidencialidad, incluso después de terminar la relación correspondiente.</p>
+
+            <h2 id="seccion-12">12. Derechos ARCO</h2>
+            <p>La persona titular tiene derecho a <strong>Acceso</strong> (conocer qué datos tenemos), <strong>Rectificación</strong> (corregir datos), <strong>Cancelación</strong> (eliminar datos) y <strong>Oposición</strong> (oponerse al tratamiento).</p>
+            <p>La solicitud deberá enviarse a:<br>
+            Correo de privacidad: <mark>[CORREO DE PRIVACIDAD]</mark></p>
+            <p>Deberá contener información para identificar al titular y describir el derecho a ejercer. Atenderemos las solicitudes en los plazos legales aplicables.</p>
+
+            <h2 id="seccion-13">13. Revocación del consentimiento</h2>
+            <p>La persona titular podrá solicitar la revocación de su consentimiento, la cual no tendrá efectos retroactivos. Solicitudes mediante: <mark>[CORREO DE PRIVACIDAD]</mark></p>
+
+            <h2 id="seccion-14">14. Limitación del uso o divulgación</h2>
+            <p>La persona titular podrá solicitar mecanismos para limitar determinados usos de sus datos. Pondremos a disposición los medios a través de nuestros canales de contacto.</p>
+
+            <h2 id="seccion-15">15. Conservación de los datos</h2>
+            <p>Conservaremos los datos durante el periodo necesario para cumplir las finalidades y obligaciones legales. Posteriormente, podrán ser eliminados o bloqueados.</p>
+
+            <h2 id="seccion-16">16. Cookies y tecnologías similares</h2>
+            <p>Los sitios web de ShaMinKet podrán utilizar cookies para mantener el funcionamiento, recordar preferencias, analizar uso y mejorar la experiencia. El usuario podrá administrarlas mediante la configuración de su navegador.</p>
+
+            <h2 id="seccion-17">17. Menores de edad</h2>
+            <p>Podremos recibir información de menores únicamente cuando sea apropiado y legal. Requeriremos autorización de quien ejerza la patria potestad o tutela antes del tratamiento.</p>
+
+            <h2 id="seccion-18">18. Exclusión de responsabilidad por servicios de terceros</h2>
+            <p>Las fallas o actos atribuibles exclusivamente a plataformas externas (redes sociales, IA, alojamiento web) estarán sujetas a las condiciones de esos terceros.</p>
+
+            <h2 id="seccion-19">19. Modificaciones al Aviso de Privacidad</h2>
+            <p>ShaMinKet podrá modificar este aviso por cambios legales o tecnológicos. La versión actualizada se publicará en nuestros sitios web.</p>
+
+            <h2 id="seccion-20">20. Aceptación y conocimiento</h2>
+            <p>Entregar datos o usar servicios no es renuncia de derechos. El consentimiento podrá otorgarse expresa o tácitamente. Este documento permite a las personas tomar decisiones informadas.</p>
+
+            <h2 id="seccion-21">21. Contacto</h2>
+            <p>Para cualquier cuestión sobre privacidad:<br>
+            Correo electrónico: <mark>[CORREO DE PRIVACIDAD]</mark><br>
+            Sitio web: shaminket.com<br>
+            Responsable de privacidad: <mark>[NOMBRE O CARGO]</mark></p>
+
+            <div class="footer-brand">
+                ShaMinKet<br>
+                <span>Precisión + Tecnología + Confianza + Crecimiento + Simplicidad.</span>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Script para generar automáticamente el índice a partir de las etiquetas <h2>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tocList = document.getElementById('toc-list');
+            const headers = document.querySelectorAll('.content h2');
+
+            headers.forEach(function(header) {
+                // Si el h2 no tiene ID, le creamos uno a partir de su texto
+                if (!header.id) {
+                    header.id = header.innerText.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                }
+                
+                // Crear el elemento de la lista para el índice
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                
+                a.href = '#' + header.id;
+                a.textContent = header.innerText;
+                
+                li.appendChild(a);
+                tocList.appendChild(li);
+            });
+        });
+    </script>
+</body>
+</html>
